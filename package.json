@@ -1,0 +1,27 @@
+{
+    "name": "react-permision",
+    "version": "0.0.1init",
+    "description": "Full configurable permission system for react web apps",
+    "main": "index.js",
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "build": "lerna run build --scope react-permision",
+        "watch": "lerna run watch --scope react-permision",
+        "package": "lerna exec --scope react-permision -- npm pack"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "lerna": "^6.4.1",
+        "@types/react": "^18.0.26",
+        "@types/react-dom": "^18.0.10",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "private": true,
+    "author": "Dominic Seel",
+    "license": "MIT"
+}
