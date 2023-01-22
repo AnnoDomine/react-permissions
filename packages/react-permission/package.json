@@ -1,5 +1,5 @@
 {
-    "name": "react-permission",
+    "name": "@derhacki/react-permissions",
     "version": "0.2.0",
     "description": "Permission controll",
     "scripts": {
