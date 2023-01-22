@@ -4,17 +4,14 @@
     "description": "Permission controll",
     "scripts": {
         "prepack": "npm build",
-        "run build": "npm build",
         "tsc": "npx tsc && npx tsc --module commonjs --outDir lib/cjs",
         "build": "rollup -c",
         "watch": "rollup -cw"
     },
-    "author": "Dominic Seel",
+    "author": "Dominic Seel <seel.dominic@googlemail.com>",
     "license": "MIT",
     "dependencies": {
-        "@rollup/plugin-typescript": "^11.0.0",
         "components": "*",
-        "example": "^0.1.0",
         "hooks": "*",
         "provider": "*"
     },
@@ -29,6 +26,7 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@rollup/plugin-typescript": "^11.0.0",
         "@rollup/plugin-commonjs": "^24.0.0",
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@types/react": "^18.0.26",
@@ -52,5 +50,12 @@
                 ]
             }
         }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AnnoDomine/react-permissions"
+    },
+    "bugs": {
+        "url": "https://github.com/AnnoDomine/react-permissions/issues"
     }
 }

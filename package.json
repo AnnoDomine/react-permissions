@@ -1,5 +1,5 @@
 {
-    "name": "@derhacki/root",
+    "name": "@derhackt/react-permissions",
     "version": "0.1.1-0",
     "description": "Full configurable permission system for react web apps",
     "main": "index.js",
@@ -7,7 +7,6 @@
         "example": "example"
     },
     "scripts": {
-        "run build": "npm build",
         "build": "lerna run build --scope react-permission",
         "watch": "lerna run watch --scope react-permission",
         "package": "lerna exec --scope react-permission -- npm pack",
@@ -18,16 +17,21 @@
         "packages/*"
     ],
     "devDependencies": {
+        "@nrwl/nx-cloud": "^15.0.2",
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
         "lerna": "^6.4.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
-    "private": true,
-    "author": "Dominic Seel",
+    "author": "Dominic Seel <seel.dominic@googlemail.com>",
     "license": "MIT",
-    "dependencies": {
-        "@nrwl/nx-cloud": "^15.0.2"
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AnnoDomine/react-permissions"
+    },
+    "bugs": {
+        "url": "https://github.com/AnnoDomine/react-permissions/issues"
     }
 }
