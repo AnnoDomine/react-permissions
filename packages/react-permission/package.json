@@ -41,5 +41,15 @@
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-typescript2": "^0.34.1",
         "typescript": "^4.9.4"
+    },
+    "nx": {
+        "targets": {
+            "build": {
+                "outputs": [
+                    "{projectRoot}/build",
+                    "{projectRoot}/public/build"
+                ]
+            }
+        }
     }
 }

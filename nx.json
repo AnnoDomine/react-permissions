@@ -1,41 +1,44 @@
 {
+  "$schema": "node_modules/nx/schemas/nx-schema.json",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
-          "build"
-        ]
+          "build",
+          "test"
+        ],
+        "accessToken": "ODlmNDU0NDEtYTIzMS00NDc0LWFkYTEtZDNiNzE3YmZjMDk1fHJlYWQtd3JpdGU="
       }
     }
   },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ],
+    "prod": [
+      "!{projectRoot}/**/*.spec.tsx"
+    ]
+  },
   "targetDefaults": {
-    "prepack": {
-      "dependsOn": [
-        "^prepack"
-      ]
-    },
-    "tsc": {
-      "dependsOn": [
-        "^tsc"
-      ]
-    },
     "build": {
+      "inputs": [
+        "prod",
+        "^prod"
+      ],
       "dependsOn": [
         "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
       ]
     },
-    "watch": {
-      "dependsOn": [
-        "^watch"
+    "test": {
+      "inputs": [
+        "default",
+        "^prod"
       ]
     },
-    "install": {
+    "dev": {
       "dependsOn": [
-        "^install"
+        "^build"
       ]
     }
   }

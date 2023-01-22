@@ -17,13 +17,16 @@
         "packages/*"
     ],
     "devDependencies": {
-        "lerna": "^6.4.1",
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
+        "lerna": "^6.4.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "private": true,
     "author": "Dominic Seel",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "@nrwl/nx-cloud": "^15.0.2"
+    }
 }
