@@ -1,0 +1,42 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "prepack": {
+      "dependsOn": [
+        "^prepack"
+      ]
+    },
+    "tsc": {
+      "dependsOn": [
+        "^tsc"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "watch": {
+      "dependsOn": [
+        "^watch"
+      ]
+    },
+    "install": {
+      "dependsOn": [
+        "^install"
+      ]
+    }
+  }
+}

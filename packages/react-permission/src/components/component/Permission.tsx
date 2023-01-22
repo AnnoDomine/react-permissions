@@ -1,18 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import type { ReactNode } from "react";
+import { ComponentProps } from "../../types";
 import { PermissionContext } from "../provider/PermissionProvider";
-
-type Props = {
-    permissions?: { permissionName: string | string[] }[];
-    noPermissionsNeeded?: boolean;
-    children: JSX.Element | ReactNode;
-};
 
 const Permission = ({
     permissions = undefined,
     noPermissionsNeeded = false,
     children,
-}: Props): JSX.Element | ReactNode => {
+}: ComponentProps): JSX.Element => {
     const permissionContext = useContext(PermissionContext);
 
     if (permissionContext === undefined)
@@ -40,44 +34,26 @@ const Permission = ({
         permissions === undefined && permissionContext.config.no_permissions_needed && noPermissionsNeeded
     );
 
-    function isTypeOf<T>(check: unknown): check is T {
-        if (check as T) {
-            return true;
-        }
-        return false;
-    }
-
-    const permissionViewName = permissionContext.config.own_permission_view_name ?? "view";
+    const permissionViewName = permissionContext.config.own_permission_name?.view ?? "view";
 
     const setChildrenPermissionWithArray = (permissionNames: string[]) => {
         permissionNames.forEach((name) => {
             givenPermissions &&
                 Object.keys(givenPermissions).includes(name) &&
-                !givenPermissions[name][permissionViewName] &&
-                setHavePermission(false);
+                givenPermissions[name][permissionViewName] &&
+                setHavePermission(true);
         });
-    };
-
-    const setChildrenPermission = (name: string) => {
-        givenPermissions &&
-            Object.keys(givenPermissions).includes(name) &&
-            !givenPermissions[name][permissionViewName] &&
-            setHavePermission(false);
     };
 
     useEffect(() => {
         if (permissions !== undefined && !noPermissionsNeeded) {
-            permissions.forEach((permission) => {
-                if (isTypeOf<string[]>(permission.permissionName))
-                    setChildrenPermissionWithArray(permission.permissionName);
-                else setChildrenPermission(permission.permissionName);
-            });
+            setChildrenPermissionWithArray(permissions);
         }
     }, [givenPermissions, permissions, children]);
 
     if (permissionContext.config.no_permissions_needed && noPermissionsNeeded) return children;
 
-    if (!havePermission) return permissionContext.config.fallback_component;
+    if (!havePermission) return permissionContext.config.fallback_component ?? <></>;
 
     return children;
 };

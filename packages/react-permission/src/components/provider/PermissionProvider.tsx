@@ -1,22 +1,5 @@
 import { createContext, useMemo } from "react";
-import type { ReactNode } from "react";
-
-type Props = TypePermissionContext & {
-    children: JSX.Element | ReactNode;
-};
-
-type TypePermissionWithView = {
-    [permissionName: string]: { [permission: string]: boolean } & { view: boolean };
-} | null;
-
-type TypePermissionContext = {
-    config: {
-        current: { permissions: TypePermissionWithView | null };
-        fallback_component?: JSX.Element | ReactNode;
-        no_permissions_needed: boolean;
-        own_permission_view_name?: string;
-    };
-};
+import { PermissionProviderContextProps, TypePermissionContext } from "../../types";
 
 export const PermissionContext = createContext<TypePermissionContext>({
     config: {
@@ -24,11 +7,12 @@ export const PermissionContext = createContext<TypePermissionContext>({
             permissions: null,
         },
         no_permissions_needed: false,
-        fallback_component: <></>,
+        fallback_component: <>No Permission</>,
+        own_permission_name: undefined,
     },
 });
 
-const PermissionProvider = ({ config, children }: Props) => {
+const PermissionProvider = ({ config, children }: PermissionProviderContextProps): JSX.Element => {
     const permission_value = useMemo(() => {
         return {
             config: {
@@ -37,6 +21,7 @@ const PermissionProvider = ({ config, children }: Props) => {
                 },
                 no_permissions_needed: config.no_permissions_needed,
                 fallback_component: config.fallback_component,
+                own_permission_name: config.own_permission_name,
             },
         };
     }, [config.current]);

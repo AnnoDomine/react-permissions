@@ -6,6 +6,7 @@
         "lib": ["es6", "dom", "es2016", "es2017"],
         "jsx": "react-jsx",
         "declaration": true,
+        "declarationDir": "dist/types",
         "moduleResolution": "node",
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -15,8 +16,9 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true
     },
-    "include": ["src/**/*.ts*"],
+    "include": ["src/**/*.ts*", "rollup.config.mjs", "*.d.ts"],
     "exclude": ["node_modules", "lib"]
 }
