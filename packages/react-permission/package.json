@@ -4,11 +4,12 @@
     "description": "Permission controll",
     "scripts": {
         "prepack": "npm build",
+        "run build": "npm build",
         "tsc": "npx tsc && npx tsc --module commonjs --outDir lib/cjs",
         "build": "rollup -c",
         "watch": "rollup -cw"
     },
-    "author": "",
+    "author": "Dominic Seel",
     "license": "MIT",
     "dependencies": {
         "@rollup/plugin-typescript": "^11.0.0",

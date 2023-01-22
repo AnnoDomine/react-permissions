@@ -1,12 +1,13 @@
 {
     "name": "root",
-    "version": "0.1.0",
+    "version": "0.1.1-0",
     "description": "Full configurable permission system for react web apps",
     "main": "index.js",
     "directories": {
         "example": "example"
     },
     "scripts": {
+        "run build": "npm build",
         "build": "lerna run build --scope react-permission",
         "watch": "lerna run watch --scope react-permission",
         "package": "lerna exec --scope react-permission -- npm pack",
