@@ -1,5 +1,5 @@
 {
-    "name": "root",
+    "name": "@derhacki/root",
     "version": "0.1.1-0",
     "description": "Full configurable permission system for react web apps",
     "main": "index.js",
