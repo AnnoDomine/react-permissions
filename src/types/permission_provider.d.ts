@@ -1,20 +1,21 @@
-export type TypePermissionContext = {
+export interface TypePermissionContext {
     config: {
         current: { permissions: TypePermissionWithDefault | null };
         no_permissions_needed: boolean;
         fallback_component?: JSX.Element;
         own_permission_name?: TypeOwnPermissionNames;
     };
-};
+}
 export type PermissionProviderContextProps = TypePermissionContext & {
     children: JSX.Element;
 };
-export type TypeOwnPermissionNames<PermissionType = string> = {
+export interface TypeOwnPermissionNames<PermissionType = string> {
     view: PermissionType;
     create: PermissionType;
     update: PermissionType;
     delete: PermissionType;
-};
-export type TypePermissionWithDefault = {
-    [permissionName: string]: { [permission: string]: boolean } & TypeOwnPermissionNames<boolean>;
-} | null;
+}
+export type TypePermissionWithDefault = Record<
+    string,
+    Record<string, boolean> & TypeOwnPermissionNames<boolean>
+> | null;

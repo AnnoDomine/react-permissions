@@ -1,5 +1,8 @@
 import { createContext, useMemo } from "react";
-import { PermissionProviderContextProps, TypePermissionContext } from "../../types";
+import type {
+    PermissionProviderContextProps,
+    TypePermissionContext,
+} from "../../types";
 
 export const PermissionContext = createContext<TypePermissionContext>({
     config: {
@@ -12,8 +15,11 @@ export const PermissionContext = createContext<TypePermissionContext>({
     },
 });
 
-const PermissionProvider = ({ config, children }: PermissionProviderContextProps): JSX.Element => {
-    const permission_value = useMemo(() => {
+const PermissionProvider = ({
+    config,
+    children,
+}: PermissionProviderContextProps): JSX.Element => {
+    const permissionValue = useMemo(() => {
         return {
             config: {
                 current: {
@@ -26,7 +32,11 @@ const PermissionProvider = ({ config, children }: PermissionProviderContextProps
         };
     }, [config.current]);
 
-    return <PermissionContext.Provider value={permission_value}>{children}</PermissionContext.Provider>;
+    return (
+        <PermissionContext.Provider value={permissionValue}>
+            {children}
+        </PermissionContext.Provider>
+    );
 };
 
 PermissionContext.displayName = "PermissionProvider";
