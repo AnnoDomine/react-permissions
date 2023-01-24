@@ -2,12 +2,9 @@
     "name": "@derhackt/react-permissions",
     "version": "0.2.0",
     "description": "Full configurable permission system for react web apps",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
-        "build": "lerna run build --scope react-permission",
-        "watch": "lerna run watch --scope react-permission",
-        "package": "lerna exec --scope react-permission -- npm pack",
-        "linkit": "npx lerna add react-permission --scope example"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "peerDependencies": {
         "react": "^18.2.0",
@@ -30,5 +27,14 @@
     "bugs": {
         "url": "https://github.com/AnnoDomine/react-permissions/issues"
     },
+    "homepage": "https://github.com/AnnoDomine/react-permissions#readme",
+    "keywords": [
+        "npm",
+        "node",
+        "react",
+        "reactjs",
+        "permission",
+        "permissions"
+    ],
     "gitHead": "35b86c48e4b0f64f21037d236179a3d25a3a4a9e"
 }
