@@ -6,7 +6,8 @@
         "prepack": "npm build",
         "tsc": "npx tsc && npx tsc --module commonjs --outDir lib/cjs",
         "build": "rollup -c",
-        "watch": "rollup -cw"
+        "watch": "rollup -cw",
+        "release": "npm run build && lerna publish --git-remote react-permissions"
     },
     "author": "Dominic Seel <seel.dominic@googlemail.com>",
     "license": "MIT",
@@ -57,5 +58,6 @@
     },
     "bugs": {
         "url": "https://github.com/AnnoDomine/react-permissions/issues"
-    }
+    },
+    "gitHead": "35b86c48e4b0f64f21037d236179a3d25a3a4a9e"
 }
