@@ -2,8 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { PermissionProvider, Permission } from "react-permision";
-import type { TypePermissionContext } from "react-permision/lib/esm/types";
+import {
+    PermissionProvider,
+    Permission,
+} from "@derhackt/react-permissions/src";
+import { TypePermissionContext } from "@derhackt/react-permissions/src/types/index";
 import ButtonTest from "./ButtonTest";
 
 function App() {
