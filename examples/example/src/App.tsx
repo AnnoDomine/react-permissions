@@ -1,13 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
-import {
-    PermissionProvider,
-    Permission,
-} from "@derhackt/react-permissions/src";
-import { TypePermissionContext } from "@derhackt/react-permissions/src/types/index";
+import { PermissionProvider, Permission } from "@derhackt/react-permissions";
 import ButtonTest from "./ButtonTest";
+import type { TypePermissionContext } from "@derhackt/react-permissions/dist/esm/types/components/provider/PermissionProvider.types";
 
 function App() {
     const config: TypePermissionContext["config"] = {

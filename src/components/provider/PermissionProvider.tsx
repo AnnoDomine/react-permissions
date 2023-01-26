@@ -1,8 +1,8 @@
-import { createContext, useMemo } from "react";
-import type {
+import React, { createContext, useMemo } from "react";
+import {
     PermissionProviderContextProps,
     TypePermissionContext,
-} from "../../types";
+} from "./PermissionProvider.types";
 
 export const PermissionContext = createContext<TypePermissionContext>({
     config: {
@@ -10,7 +10,7 @@ export const PermissionContext = createContext<TypePermissionContext>({
             permissions: null,
         },
         no_permissions_needed: false,
-        fallback_component: <>No Permission</>,
+        fallback_component: <React.Fragment>No Permission</React.Fragment>,
         own_permission_name: undefined,
     },
 });

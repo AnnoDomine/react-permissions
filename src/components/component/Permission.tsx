@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react";
-import type { ComponentProps } from "../../types";
+import React, { useContext, useEffect, useState } from "react";
 import { PermissionContext } from "../provider/PermissionProvider";
+import { PermissionComponentProps } from "./Permission.types";
 
 const Permission = ({
     permissions = undefined,
     noPermissionsNeeded = false,
     children,
-}: ComponentProps): JSX.Element => {
+}: PermissionComponentProps): JSX.Element => {
     const permissionContext = useContext(PermissionContext);
 
     if (permissionContext === undefined) {
@@ -77,7 +77,11 @@ const Permission = ({
     }
 
     if (!havePermission) {
-        return permissionContext.config.fallback_component ?? <></>;
+        return (
+            permissionContext.config.fallback_component ?? (
+                <React.Fragment></React.Fragment>
+            )
+        );
     }
 
     return children;

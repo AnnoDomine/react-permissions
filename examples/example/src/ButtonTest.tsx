@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { usePermission } from "@derhackt/react-permissions/src";
+import { useState } from "react";
+import { usePermission } from "@derhackt/react-permissions";
 
 type Props = {};
 

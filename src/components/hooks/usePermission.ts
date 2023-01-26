@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import type { UsePermissionReturn } from "../../types";
 import { PermissionContext } from "../provider/PermissionProvider";
+import { UsePermissionReturn } from "./usePermission.types";
 
 function usePermission<Permissions>(
     neededPermissions: Permissions[]

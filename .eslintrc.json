@@ -3,7 +3,7 @@
         "browser": true,
         "es2021": true
     },
-    "ignorePatterns": "./lib",
+    "ignorePatterns": "dist",
     "settings": {
         "react": {
             "version": "detect"
@@ -25,7 +25,7 @@
 
             "parserOptions": {
                 "tsconfigRootDir": ".",
-                "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+                "project": ["tsconfig.json"] // Specify it only for TypeScript files
             }
         }
     ],
