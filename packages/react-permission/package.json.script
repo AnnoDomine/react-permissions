@@ -1,2 +1,0 @@
-npm pkg set scripts.fmt="npx -p prettier@2 -- prettier -w '**/*.{js,md}'"
-npm pkg set scripts.prepublish="npm run build"
