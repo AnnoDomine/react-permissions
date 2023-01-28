@@ -102,7 +102,7 @@ After download and added to your project you have access to all compnents, hooks
 
 ### Prerequisites
 
-Download and add the package via npm or yarn to your project.
+This package is only for use in ReactJS Version 18.2.0 or higher.
 
 
 
