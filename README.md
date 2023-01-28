@@ -103,7 +103,8 @@ After download and added to your project you have access to all compnents, hooks
 ### Prerequisites
 
 This package is only for use in ReactJS Version 18.2.0 or higher.
-Functionality in lower versions is not guaranteed and will not be supported in the future.
+
+_Functionality in lower versions is not guaranteed and will not be supported in the future._
 
 
 
