@@ -19,11 +19,11 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![GitHub contributors](https://badgen.net/github/contributors/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/contributors)
-[![GitHub release](https://img.shields.io/github/release/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/releases)
 [![GitHub forks](https://badgen.net/github/forks/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/fork)
 [![GitHub stars](https://badgen.net/github/stars/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/stargazers)
 [![GitHub watchers](https://badgen.net/github/watchers/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/watchers)
 [![GitHub issues](https://badgen.net/github/issues/AnnoDomine/react-permissions/)](https://github.com/AnnoDomine/react-permissions/issues)
+
 [![GitHub release](https://img.shields.io/github/release/AnnoDomine/react-permissions.svg)](https://GitHub.com/AnnoDomine/react-permissions/releases/)
 [![Npm package yearly downloads](https://badgen.net/npm/dy/@derhackt/react-permissions)](https://npmjs.com/package/@derhackt/react-permissions)
 ![Types included](https://badgen.net/npm/types/tslib)
