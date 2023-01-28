@@ -18,6 +18,8 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<div align="center">
+
 [![GitHub contributors](https://badgen.net/github/contributors/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/contributors)
 [![GitHub forks](https://badgen.net/github/forks/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/fork)
 [![GitHub stars](https://badgen.net/github/stars/AnnoDomine/react-permissions)](https://github.com/AnnoDomine/react-permissions/stargazers)
@@ -28,6 +30,8 @@
 [![Npm package yearly downloads](https://badgen.net/npm/dy/@derhackt/react-permissions)](https://npmjs.com/package/@derhackt/react-permissions)
 ![Types included](https://badgen.net/npm/types/tslib)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+</div>
 
 
 
