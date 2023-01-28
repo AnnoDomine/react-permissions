@@ -295,7 +295,8 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-*ReactJS and ReactJS-logo are under Creative Common Attribution 4.0 International license* [ReactJS-License](https://github.com/reactjs/reactjs.org/blob/main/LICENSE-DOCS.md)*
+*ReactJS and ReactJS-logo are under Creative Common Attribution 4.0 International license* [ReactJS-License](https://github.com/reactjs/reactjs.org/blob/main/LICENSE-DOCS.md)
+
 *Logo modified by [AnnoDomine](https://github.com/AnnoDomine)*
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
