@@ -252,6 +252,8 @@ Example: [usePermission-hook example](https://github.com/AnnoDomine/react-permis
 - [x] Adding component
 - [x] Adding hook
 - [x] Adding types
+- [ ] Adding README.md
+- [ ] Adding DocJS
 - [ ] Adding more usefull components
 - [ ] Adding logged in restriction
 - [ ] Adding native support for react-redux
