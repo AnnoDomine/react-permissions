@@ -73,7 +73,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project 
 
-Here comes an awsm desciption of this package
+***react-permmissions*** can be used to easily manage permissions globally.
+The package supports the basic permissions _view_, _create_, _update_ and _delete_.
+The indication of these permissions is done via an object.
+The configuration and use, as well as retrieving the permissions for the developer should be simplified.
+This happens via a component which is responsible for rendering embedded components.
+Furthermore, the package contains a use-hook, through which one gets access to all permissions.
+
+*The readme will be extended in future
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,9 +91,9 @@ Here comes an awsm desciption of this package
 - [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/) VisualStudioCode
 - [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000000)](https://www.javascript.com/) JavaScript
 - [![TypeScript](https://img.shields.io/badge/--3178C6?logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/) TypeScript
-- [![ReactJS](https://img.shields.io/badge/--000000?logo=react&logoColor=61DBFB)](https://www.typescriptlang.org/) ReactJS
-- [![ReactJS](https://img.shields.io/badge/--FFFFFF?logo=npm&logoColor=CC3534)](https://www.npmjs.com/) NPM
-- [![ReactJS](https://img.shields.io/badge/--341BAB?logo=eslint&logoColor=FBFBFF)](https://eslint.org/) ESLint
+- [![ReactJS](https://img.shields.io/badge/--000000?logo=react&logoColor=61DBFB)](https://www.reactjs.org/) ReactJS
+- [![NPM](https://img.shields.io/badge/--FFFFFF?logo=npm&logoColor=CC3534)](https://www.npmjs.com/) NPM
+- [![ESLint](https://img.shields.io/badge/--341BAB?logo=eslint&logoColor=FBFBFF)](https://eslint.org/) ESLint
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,9 +129,9 @@ npm install @derhackt/react-permissions@latest
 ```
 * yarn
 ```sh
-npm add @derhackt/react-permissions@latest
+yarn add @derhackt/react-permissions@latest
 ```
-2. Wrapp your project into the PermissionProvider
+2. Wrap your project into the PermissionProvider
 ```typescript
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -225,13 +232,13 @@ import { Permission } from "@derhackt/react-permissions";
     <p>no permission needed. even 'guest' can see this text.</p>
 </Permission>
 <Permission permissions={["admin"]}>
-    <p>only 'test' have view permission</p>
+    <p>only 'admin' have view permission</p>
 </Permission>
 <Permission permissions={["user"]}>
-    <p>only 'restrict' have view permission</p>
+    <p>only 'user' have view permission</p>
 </Permission>
 <Permission permissions={["admin", "user"]}>
-    <p>'test' and 'restrict' have view permission</p>
+    <p>'admin' and 'user' have view permission</p>
 </Permission>
 ```
 
@@ -252,7 +259,7 @@ Example: [usePermission-hook example](https://github.com/AnnoDomine/react-permis
 - [x] Adding component
 - [x] Adding hook
 - [x] Adding types
-- [ ] Adding README.md
+- [x] Adding README.md
 - [ ] Adding DocJS
 - [ ] Adding more usefull components
 - [ ] Adding logged in restriction
